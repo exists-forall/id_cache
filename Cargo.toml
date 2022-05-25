@@ -1,0 +1,21 @@
+[package]
+name = "id_cache"
+version = "0.1.0"
+edition = "2021"
+
+authors = ["William Brandon"]
+repository = "https://github.com/exists-forall/id_cache"
+license = "MIT"
+categories = ["data-structures", "rust-patterns"]
+keywords = ["cache", "id", "index", "intern"]
+description = "A cache data structure which generates sequentially-assigned ids for unique values"
+
+[dependencies]
+id_collections = "1.0"
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+[dev-dependencies]
+serde_json = "1.0"
+
+[features]
+serde = ["dep:serde", "id_collections/serde"]
